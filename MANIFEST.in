@@ -1,0 +1,4 @@
+include scripts/build_ffmpeg_linux.sh
+recursive-include src/audiomaster/bin *
+recursive-include src/audiomaster/vendor *
+recursive-include tests *.py

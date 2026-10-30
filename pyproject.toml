@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel>=0.42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audiomaster-lite"
+version = "0.1.0"
+description = "Deterministic audio mastering with a bundled audio-only FFmpeg"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+audiomaster = "audiomaster.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+audiomaster = ["bin/*", "vendor/*"]
